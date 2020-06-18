@@ -41,11 +41,15 @@ type Queue struct {
 
 func (_this *Queue) Push(value int) {
 	_this.val = append(_this.val, value)
+	_this.length += 1
 }
 
 func (_this *Queue) Pop() (value int, err error) {
+	// 第 0 个先出，使用第 0 个之后的所有值作为新切片
 	value = _this.val[0]
-	_this.val = _this.val[1 : _this.length-1]
+	// 切片表示的右侧是开区间（不包含）
+	_this.val = _this.val[1:_this.length]
+	_this.length -= 1
 	return value, nil
 }
 

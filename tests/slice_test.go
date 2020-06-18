@@ -5,6 +5,7 @@ import (
 	"time"
 )
 
+//! 测试 Stack
 func TestMockStack_len(t *testing.T) {
 	arr := make([]int, 2)
 	s1 := Stack{
@@ -20,6 +21,7 @@ func TestMockStack_len(t *testing.T) {
 	time.Sleep(time.Duration(2) * time.Second)
 }
 
+//! 测试 Queue
 func TestQueue(t *testing.T) {
 	q1 := Queue{
 		val:    []int{1, 2, 3},
@@ -27,7 +29,20 @@ func TestQueue(t *testing.T) {
 	}
 	v1, err := q1.Pop()
 	if v1 != 1 || err != nil {
-		t.Errorf("the value poped is incorrect")
+		t.Errorf("the value poped is incorrect 1")
+	}
+	v1, err = q1.Pop()
+	if v1 != 2 || err != nil {
+		t.Errorf("the value poped is incorrect 2")
+	}
+	v1, err = q1.Pop()
+	if v1 != 3 || err != nil {
+		t.Errorf("the value poped is incorrect 3")
+	}
+	q1.Push(100254)
+	v1, err = q1.Pop()
+	if v1 != 100254 || err != nil {
+		t.Errorf("the value poped is incorrect 100254")
 	}
 	q1.Push(12)
 	q1.Push(22)
