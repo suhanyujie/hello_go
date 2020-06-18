@@ -1,5 +1,7 @@
 package tests
 
+// 栈，使用 slice 类型模拟栈
+// 相关方法：Pop Push IsEmpty
 type Stack struct {
 	val    []int
 	length int
@@ -23,13 +25,30 @@ func (this *Stack) Pop() (int, error) {
 	return popVal, nil
 }
 
-//! 模拟栈
-func MockStack() int {
-	stack := make([]int, 0)
-	// 压栈
-	stack = append(stack, 10)
-	// 出栈
-	val := stack[len(stack)-1]
-	stack = stack[:len(stack)-1]
-	return val
+// 栈是否为空
+func (_this *Stack) IsEmpty() bool {
+	return _this.length == 0
+}
+
+// ------------------------
+
+// 队列，使用 slice 模拟队列
+// 队列相关方法：Push, Pop, IsEmpty, Len
+type Queue struct {
+	val    []int
+	length int
+}
+
+func (_this *Queue) Push(value int) {
+	_this.val = append(_this.val, value)
+}
+
+func (_this *Queue) Pop() (value int, err error) {
+	value = _this.val[0]
+	_this.val = _this.val[1 : _this.length-1]
+	return value, nil
+}
+
+func (_this *Queue) IsEmpty() bool {
+	return _this.length == 0
 }
