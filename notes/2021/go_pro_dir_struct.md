@@ -1,5 +1,5 @@
 >* 原文来自：https://github.com/suhanyujie/hello_go/blob/master/notes/2021/go_pro_dir_struct.md
->* 文章标题：go 项目目录的结构
+>* 文章标题：【go 笔记】go 项目目录的结构
 >* 作者：[suhanyujie](https://github.com/suhanyujie)
 >* 标签：go，项目目录，go 初学
 >* tip：如果异常，还请指正~
