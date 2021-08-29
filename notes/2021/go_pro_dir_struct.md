@@ -1,3 +1,9 @@
+>* 原文来自：https://github.com/suhanyujie/hello_go/blob/master/notes/2021/go_pro_dir_struct.md
+>* 文章标题：go 项目目录的结构
+>* 作者：[suhanyujie](https://github.com/suhanyujie)
+>* 标签：go，项目目录，go 初学
+>* tip：如果异常，还请指正~
+
 ## go 项目目录的结构
 使用 go 开发也快一年了，对 go 的了解还是有很大的提高空间。在这近一年来，很多时候，知道 go 很灵活，无论是从语法使用上，还是从项目结构组织上，都具备很大的灵活性。
 但过大的灵活性也带来了百家齐放、无固定标准，进而导致一些初学者很疑惑。
